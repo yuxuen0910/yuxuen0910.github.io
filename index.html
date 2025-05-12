@@ -4,26 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>吴雨宣 | 3D动画设计师</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #111;
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
       color: #fff;
-      line-height: 1.6;
+      overflow-x: hidden;
     }
     header {
-      background-color: #d62828;
-      padding: 2rem;
+      padding: 4rem 1rem 2rem;
       text-align: center;
+      background-color: #d62828;
+      color: white;
+      animation: fadeIn 1s ease-out;
     }
     header h1 {
+      font-size: 3rem;
       margin: 0;
-      font-size: 2.5rem;
     }
     header p {
-      margin: 0.5rem 0 0;
+      margin-top: 1rem;
       font-size: 1.2rem;
+      font-weight: 300;
     }
     section {
       max-width: 960px;
@@ -31,27 +38,61 @@
       padding: 1rem;
     }
     h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
       color: #f77f00;
-      border-bottom: 1px solid #f77f00;
-      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f77f00;
+      display: inline-block;
+    }
+    .card {
+      background-color: #222;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     ul {
       list-style: none;
-      padding: 0;
+      padding-left: 0;
+    }
+    ul li {
+      padding: 0.5rem 0;
     }
     ul li::before {
       content: "✔️ ";
+      margin-right: 0.5rem;
     }
     .contact {
-      background-color: #222;
-      padding: 1rem;
-      border-radius: 8px;
+      background-color: #333;
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .contact a {
+      background-color: #f77f00;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .contact a:hover {
+      background-color: #ffa500;
     }
     footer {
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
       color: #aaa;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -64,22 +105,28 @@
 
   <section>
     <h2>服务项目</h2>
-    <ul>
-      <li>整套汽车动画制作</li>
-      <li>3D建模与贴图</li>
-      <li>灯光设计与渲染</li>
-      <li>动态视觉与动效包装</li>
-    </ul>
+    <div class="card">
+      <ul>
+        <li>整套汽车动画制作</li>
+        <li>3D建模与贴图</li>
+        <li>灯光设计与渲染</li>
+        <li>动态视觉与动效包装</li>
+      </ul>
+    </div>
   </section>
 
   <section>
     <h2>作品展示</h2>
-    <p>目前暂无作品展示，欢迎联系我获取更多资料。</p>
+    <div class="card">
+      <p>目前暂无作品展示，欢迎联系我获取更多资料。</p>
+    </div>
   </section>
 
   <section class="contact">
     <h2>联系我</h2>
-    <p>Email：<a href="mailto:yuxuen0910@hotmail.com" style="color:#fcbf49">yuxuen0910@hotmail.com</a></p>
+    <p>
+      <a href="mailto:yuxuen0910@hotmail.com">点击发送邮件</a>
+    </p>
   </section>
 
   <footer>
